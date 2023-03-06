@@ -1,11 +1,26 @@
-isHead=1
-isTail=2
+isHead=1;
+isTail=2;
+headCount=0;
+tailCount=0;
+for ((i=1; i<=5; i++))
+do
+coinFace=$((1+RANDOM%2));
+case $coinFace in
+	          $isHead)
+	          headCount=$(($headCount+1))
 
-coinFlip=$((1+RANDOM%2))
 
-  if [ $isHead -eq $coinFlip ]
-  then
-        echo "Head"
-  else
-	echo "Tail"
-  fi
+	          ;;
+	          $isTail)
+	          tailCount=$(($tailCount+1))
+
+
+	          ;;
+esac
+
+done
+	echo "Head won $headCount times"
+
+
+	echo "Tail won $tailCount times"
+
