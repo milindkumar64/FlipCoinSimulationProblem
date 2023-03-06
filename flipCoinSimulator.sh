@@ -30,5 +30,5 @@ done
            echo "tie situation"
       else
            echo "Tail won by :" $(($tailCount-$headCount))
-     fi
+      fi
 
